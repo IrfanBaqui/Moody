@@ -1,0 +1,18 @@
+{
+  "name": "Moody",
+  "version": "0.0.0",
+  "authors": [],
+  "license": "Irfan Baqui",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "client/lib"
+  ],
+  "dependencies": {
+    "angular": "~1.2.18",
+    "angular-route": "~1.2.18",
+    "angular-mocks": "~1.2.18",
+    "angular-bootstrap": "~0.12.1"
+  }
+}
