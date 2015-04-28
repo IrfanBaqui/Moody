@@ -1,4 +1,4 @@
-<div>
+<div ng-controller="logController	">
 
 	<form>
 	<div class="form-group">
@@ -6,16 +6,16 @@
 		<div class="row">
 	      
 	  	<div class="col-xs-2">
-				<input type="radio" name="group1" value="cry"><img src="../assets/cry.jpg" />
+				<input type="radio" ng-model="mood.picture" value="cry"><img src="../assets/cry.jpg" />
 			</div>
 	  	<div class="col-xs-2">
-				<input type="radio" name="group1" value="evil" checked><img src="../assets/evil.gif" />
+				<input type="radio" ng-model="mood.picture" value="evil" checked><img src="../assets/evil.gif" />
 			</div>
 	  	<div class="col-xs-2">
-				<input type="radio" name="group1" value="kiss"><img src="../assets/kiss.gif" />
+				<input type="radio" ng-model="mood.picture" value="kiss"><img src="../assets/kiss.gif" />
 			</div>
 	  	<div class="col-xs-2">
-				<input type="radio" name="group1" value="laughing"><img src="../assets/laughing.gif" />
+				<input type="radio" ng-model="mood.picture" value="laughing"><img src="../assets/laughing.gif" />
 			</div>
 	  </div>
 	</div>
@@ -23,17 +23,17 @@
 		<div class="row">
 	  	<div class="col-xs-3">
 		  <div class="form-group">
-		    <label for="exampleInputEmail1">Rate your happiness</label>
-		    <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Enter number between 1 and 10">
+		    <label class="happinessRating">Rate your happiness</label>
+		    <input type="text" ng-model="mood.happiness" class="form-control" id="exampleInputEmail1" placeholder="Enter number between 1 and 10">
 		  </div>
 		  </div>
 		  <div class="col-xs-4">
 		  <div class="form-group">
 	    	<label for="exampleInputPassword1">Comment</label>
-	    	<input type="text" class="form-control" id="exampleInputPassword1" placeholder="Input a short comment">
+	    	<input type="text" ng-model="mood.comment" class="form-control" id="exampleInputPassword1" placeholder="Input a short comment">
 	  	</div>
 	  	</div>
 	  </div>
-	  <button type="submit" class="btn btn-default">Log Mood</button>
+	  <button type="submit" ng-click="logData()" class="btn btn-default">Log Mood</button>
 	</form>
 </div>

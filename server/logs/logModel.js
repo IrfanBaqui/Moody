@@ -1,9 +1,9 @@
 var mongoose = require('mongoose');
 
 var logSchema = new mongoose.Schema({
-	mood: String,
+	picture: String,
 	happiness: Number,
-	text: String,
+	comment: String,
 	time: { type: Date, default: Date.now }
 });
 
