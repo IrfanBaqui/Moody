@@ -1,1 +1,16 @@
 .nav, .pagination, .carousel, .panel-title a { cursor: pointer; }
+
+img {
+	height: 70px;
+	width: auto;
+}
+
+.image {
+	border: 1px black solid;
+	display: inline-block;
+}
+
+body {
+	margin: 30px;
+	margin-top: 0px;
+}

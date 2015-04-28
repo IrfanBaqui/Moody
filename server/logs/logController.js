@@ -1,7 +1,7 @@
 var Log = require('./logModel');
 
 module.exports = {
-	allLogs: function() {
+	allLogs: function(req, res) {
 
 		
 	},
