@@ -1,0 +1,9 @@
+<!-- <div ng-controller="logController"> -->
+
+<div class="log-container" id="canvas">
+	<div class="logs" ng-repeat="d in logs.data">
+		<div class="picture"><img src="../assets/{{d.picture}}.png"></div>
+		<div class="happiness">{{d.happiness}}<br><span>Happiness level</span></div>
+		<div class="comment"> {{d.comment}}</div>
+	</div>
+</div>

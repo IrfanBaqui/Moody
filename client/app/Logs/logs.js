@@ -1,36 +1,56 @@
 var moodyLogs = angular.module('moody.logs', ['ngRoute']);
 
-moodyLogs.controller('logController', function($scope, $http) {
+moodyLogs.controller('newLogController', function($scope, $http, $location) {
 	$scope.mood = {
-		picture: 'laughing',
-		happiness: 5,
+		picture: 'smiling',
+		happiness: 8,
 		comment: "All good"
 	};
-
-	$scope.allLogs;
 
 	$scope.logData = function() {
 		$http.post('/api/logs/', $scope.mood)
 		.success(function (data, status, header, config) {
 			console.log('post request success');
+			$location.path('/logs');
 		})
 		.error(function (data, status, headers, config) {
 			console.log('post request failed');
-		});
-
-		$scope.getData();
-	}
-
-	$scope.getData = function() {
-		$http.get('/api/logs/')
-		.success(function(data, status) {
-			console.log(data);
-			$scope.allLogs = data;
-		})
-		.error(function(data, status) {
-
 		});
 	}
 
 });
 
+
+moodyLogs.controller('logController', function($scope, $http, $location) {
+
+	$scope.logs = {};
+
+	$scope.init = function() {
+		$scope.loadData();
+		console.log($scope.logs.data);
+	}
+
+	$scope.loadData = function () {
+		$scope.getData()
+		.then(function(response) {
+			console.log(response.data);
+			$scope.logs.data = response.data;
+		});
+	}
+
+	$scope.getData = function() {
+		return $http.get('/api/logs/')
+		.success(function(response, status) {
+			return response;
+		})
+		.error(function(data, status) {
+			console.log("getData failed");
+			throw err;
+		});
+	}
+
+	$scope.getData()
+
+	$scope.init();
+
+});

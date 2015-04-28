@@ -4,6 +4,7 @@
 	<title></title>
 	<link href="./css/bootstrap.min.css" rel="stylesheet">
 	<link href="./css/style.css" rel="stylesheet">
+	<link rel="stylesheet" href="lib/angular-chart.js/dist/angular-chart.css">
 </head>
 <body ng-app="moody">
 
@@ -21,9 +22,9 @@
 	    <!-- Collection of nav links and other content for toggling -->
 	    <div id="navbarCollapse" class="collapse navbar-collapse">
 	        <ul class="nav navbar-nav">
-	            <li class="active"><a href="#/allLogs">Home</a></li>
+	            <li class=""><a href="#/allLogs">Home</a></li>
 	            <li><a href="#/newLog">Log Mood</a></li>
-	            <li><a href="#/Trend">Trend</a></li>
+	            <li><a href="#/trendline">Trend</a></li>
 	        </ul>
 	        <ul class="nav navbar-nav navbar-right">
 	            <li><a href="#">Login</a></li>
@@ -31,20 +32,18 @@
 	    </div>
 	</nav>
 
+<!-- <div ng-controller="main">{{test}}</div> -->
 
 <div ng-view></div>
-
 	
 
 
 
-
-
 	<script src="lib/angular/angular.js"></script>
-	<script src="app/Logs/logs.js"></script>
 	<script src="lib/angular-bootstrap/ui-bootstrap-tpls.min.js"></script>
 	<script src="lib/angular-mocks/angular-mocks.js"></script>
 	<script src="lib/angular-route/angular-route.js"></script>
+	<script src="app/Logs/logs.js"></script>
 	<script src="app.js"></script>
 </body>
 </html>	

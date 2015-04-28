@@ -2,15 +2,20 @@ var Log = require('./logModel');
 
 module.exports = {
 	allLogs: function(req, res) {
+		var result;
 		Log.find({}, function (err, logs) {
 			if (err) {
 				console.log('error finding logs');
 				throw err;
 			}
+		}).sort({time:-1}).exec(function(err, data) {
+			if (err) {
+				console.log('error sorting logs');
+				throw err;
+			}
 			res.status(200);
-			res.send(logs);
+			res.send(data);
 		})
-		
 	},
 
 	newLog: function(req, res) {

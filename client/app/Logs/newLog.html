@@ -1,21 +1,20 @@
-<div ng-controller="logController	">
-
+<div>
 	<form>
 	<div class="form-group">
    	<label for="ImageTag">Choose mood</label>
 		<div class="row">
 	      
 	  	<div class="col-xs-2">
-				<input type="radio" ng-model="mood.picture" value="cry"><img src="../assets/cry.jpg" />
+				<input type="radio" ng-model="mood.picture" value="smiling" checked><span>&nbsp;&nbsp;</span><img src="../assets/smiling.png" />
 			</div>
 	  	<div class="col-xs-2">
-				<input type="radio" ng-model="mood.picture" value="evil" checked><img src="../assets/evil.gif" />
+				<input type="radio" ng-model="mood.picture" value="confused"><span>&nbsp;&nbsp;</span><img src="../assets/confused.png" />
 			</div>
 	  	<div class="col-xs-2">
-				<input type="radio" ng-model="mood.picture" value="kiss"><img src="../assets/kiss.gif" />
+				<input type="radio" ng-model="mood.picture" value="sad"><span>&nbsp;&nbsp;</span><img src="../assets/sad.png" />
 			</div>
 	  	<div class="col-xs-2">
-				<input type="radio" ng-model="mood.picture" value="laughing"><img src="../assets/laughing.gif" />
+				<input type="radio" ng-model="mood.picture" value="angry"><span>&nbsp;&nbsp;</span><img src="../assets/angry.png" />
 			</div>
 	  </div>
 	</div>

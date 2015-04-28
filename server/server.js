@@ -5,6 +5,7 @@ var app = express();
 
 mongoose.connect('mongodb://localhost/moody');
 
+
 require('./config/middleware.js')(app, express);
 
 module.exports = app;
